@@ -20,9 +20,6 @@ def traduzir_metrica(metrica_original):
     # Leitura do CSV e armazenamento em 'df'
     df = pd.read_csv(url_csv)
 
-if uploaded_file is not None:
-    
-    df = pd.read_csv(uploaded_file)
 
     
     st.title('Análise Descritiva dos Dados de Qualidade da Água em São José dos Campos')
