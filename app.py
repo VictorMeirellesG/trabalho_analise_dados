@@ -14,7 +14,8 @@ def traduzir_metrica(metrica_original):
     return metricas_traduzidas[metrica_original]
 
 
-uploaded_file = st.file_uploader("Selecione o arquivo Excel (.csv) para análise:", type="csv")
+# Carregando o CSV do GitHub
+df = pd.read_csv("https://raw.githubusercontent.com/VictorMeirellesG/trabalho_analise_dados/main/data.csv")
 
 if uploaded_file is not None:
     
