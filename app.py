@@ -14,8 +14,11 @@ def traduzir_metrica(metrica_original):
     return metricas_traduzidas[metrica_original]
 
 
-# Carregando o CSV do GitHub
-df = pd.read_csv("https://raw.githubusercontent.com/VictorMeirellesG/trabalho_analise_dados/main/data.csv")
+ # URL do arquivo CSV no GitHub
+    url_csv = "https://raw.githubusercontent.com/<username>/<repositório>/main/data.csv"
+
+    # Leitura do CSV e armazenamento em 'df'
+    df = pd.read_csv(url_csv)
 
 if uploaded_file is not None:
     
