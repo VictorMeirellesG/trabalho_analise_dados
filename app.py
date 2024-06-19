@@ -14,12 +14,11 @@ def traduzir_metrica(metrica_original):
     return metricas_traduzidas[metrica_original]
 
 
- # URL do arquivo CSV no GitHub
-    url_csv = """[https://github.com/VictorMeirellesG/trabalho_analise_dados/blob/main/data.csv](https://github.com/VictorMeirellesG/trabalho_analise_dados/blob/main/data.csv)"""
+uploaded_file = st.file_uploader("Selecione o arquivo (.csv) para análise:", type="csv")
 
-    # Leitura do CSV e armazenamento em 'df'
-    df = pd.read_csv(url_csv)
-
+if uploaded_file is not None:
+    
+    df = pd.read_csv(uploaded_file)
 
     
     st.title('Análise Descritiva dos Dados de Qualidade da Água em São José dos Campos')
